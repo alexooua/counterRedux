@@ -26,9 +26,12 @@
   background-color: #16cbbb;
   border-radius: 5px;
   border: #16cbbb;
-
-
+  padding: 28px;
+  margin: 14px;
 }
+
+
+
 .nums{
   display: flex;
   flex-direction: row;
