@@ -1,0 +1,60 @@
+.task {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top : 4rem;
+  height: 100%;
+
+}
+.block{
+  border: solid 7px #16cbbb;
+  border-radius: 30px;
+}
+.num{
+  background-color: #16cbbb;
+  border-radius: 5px;
+  border: #16cbbb;
+  padding: 28px;
+  margin: 14px;
+}
+.numred{
+  color: red;
+  background-color: #16cbbb;
+  border-radius: 5px;
+  border: #16cbbb;
+
+
+}
+.nums{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
+  margin: 5px;
+}
+.group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
+  margin: 5px;
+  border: solid 7px #16cbbb;
+
+  border-radius: 30px;
+
+}
+
+.button{
+  background-color: #16cbbb;
+
+  border-radius: 5px;
+  border: solid 2px #16cbbb;
+}
