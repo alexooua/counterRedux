@@ -11,7 +11,7 @@ class Button extends React.Component {
                     <div className={s.group}>
 
                         <button className={s.button}
-                                disabled={this.props.nameNum===0&&this.props.title==="Res"&&"disabled"}
+                                disabled={this.props.disabled}
                                 onClick={this.props.onClickFn}
                         >{this.props.title}
                         </button>
