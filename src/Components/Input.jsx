@@ -9,12 +9,13 @@ class Input extends React.Component {
 
 
         return (
-            <div classname={s.setScreen }>
+            <div className={s.setScreen }>
                 <span > <em>{this.props.title} value</em></span>
-                <input classname= {this.props.err}
+                <input className= {this.props.err}
                        type="number"
                        onChange={this.props.setVal}
                        value={this.props.value}
+
                 />
             </div>
         );

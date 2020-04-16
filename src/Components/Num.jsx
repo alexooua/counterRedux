@@ -10,8 +10,9 @@ class Num extends React.Component {
         return (
 
                     <div className={s.num+' '+(this.props.nameNum===Number(this.props.maxVal) && s.red)}>
-
-                         {(this.props.nameNum===null)&&"Choose value and press 'Set'"} {this.props.nameNum}
+                        {((Number(this.props.maxVal) < 0 || Number(this.props.maxVal) <= Number(this.props.minVal)||Number(this.props.minVal)<0 ||Number(this.props.minVal)>=Number(this.props.maxVal ))&& "Incorrect value")||((this.props.onSet===false)&&"Enter values and press 'Set'")||(this.props.nameNum)}
+                        {/*{((this.props.nameNum===null)&&"Enter values and press 'Set'")}*/}
+                        {/* {this.props.nameNum}*/}
                     </div>
 
         );

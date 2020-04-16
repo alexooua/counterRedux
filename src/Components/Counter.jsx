@@ -9,12 +9,15 @@ class Counter extends React.Component {
     state = {
         maxVal: 0,
         minVal: 0,
-        num: null
+        num: null,
+        onSet: false
     }
     //установка maxVal
     setMaxVal = (e) => {
         this.setState(
-            {maxVal: e.currentTarget.value}
+            {maxVal: e.currentTarget.value,
+                onSet:false
+            }
         )
     }
     //установка minVal
@@ -26,7 +29,9 @@ class Counter extends React.Component {
     //кнопка установки
     setVal = () => {
         this.setState(
-            {num: this.state.minVal}
+            {num: this.state.minVal,
+                   onSet:true
+            }
         )
     }
     //кнопка инкремента
@@ -54,12 +59,13 @@ class Counter extends React.Component {
                     {/*Max Min input*/}
                     <div className={s.block}>
                         <Input
-                            err={Number(this.state.maxVal)===0 && s.red}
+                            err={(Number(this.state.maxVal)<0||Number(this.state.maxVal)<=Number(this.state.minVal)) && s.red}
                             setVal={this.setMaxVal}
                             title='Max'
                             value={this.state.maxVal}
                         />
                         <Input
+                            err={(Number(this.state.minVal)<0 ||Number(this.state.minVal)>=Number(this.state.maxVal ))&& s.red}
                             setVal={this.setMinVal}
                             title='Mix'
                             value={this.state.minVal}
@@ -81,6 +87,7 @@ class Counter extends React.Component {
                         <Num nameNum={this.state.num}
                              maxVal={this.state.maxVal}
                              minVal={this.state.minVal}
+                             onSet={this.state.onSet}
                         />
 
                         {/*2 button*/}
