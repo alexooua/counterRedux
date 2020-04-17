@@ -6,7 +6,7 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 4rem;
+  padding-top: 1rem;
   height: 100%;
 
 }
@@ -33,6 +33,7 @@
 .setScreen input {
   width: 70%;
   margin: 5px;
+  text-align: center;
 
 }
 
@@ -83,4 +84,12 @@
   background-color: #16cbbb;
   border-radius: 5px;
   border: solid 2px #16cbbb;
+  font-weight: 600
+}
+em{
+  color: #16cbbb;
+}
+h3{
+  font-size: 40px;
+  color: #fffb03;
 }

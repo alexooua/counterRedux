@@ -15,7 +15,7 @@ class Input extends React.Component {
                        type="number"
                        onChange={this.props.setVal}
                        value={this.props.value}
-
+                       onFocus={this.props.setVal}
                 />
             </div>
         );
