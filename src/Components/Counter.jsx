@@ -6,19 +6,39 @@ import Input from "./Input";
 
 
 class Counter extends React.Component {
+    componentDidMount() {
+        this.restoreState()
+    }
+
     state = {
         maxVal: 0,
         minVal: 0,
         num: null,
         onSet: false
     }
+
+    //сохраняем в базу в браузере
+    saveState = () => {
+        localStorage.setItem('Counter-state', JSON.stringify(this.state))
+    }
+    //востановлениве стейта
+    restoreState = () => {
+        let state = this.state
+        let stateAsString = localStorage.getItem("Counter-state")
+        if (stateAsString) {
+            state = JSON.parse(stateAsString)
+        }
+        this.setState(state)
+    }
+
     //установка maxVal
     setMaxVal = (e) => {
         this.setState(
             {
                 maxVal: e.currentTarget.value,
                 onSet: false
-            }
+            },
+            this.saveState
         )
     }
     //установка minVal
@@ -27,7 +47,8 @@ class Counter extends React.Component {
             {
                 minVal: e.currentTarget.value,
                 onSet: false
-            }
+            },
+            this.saveState
         )
     }
     //кнопка установки
@@ -36,7 +57,8 @@ class Counter extends React.Component {
             {
                 num: this.state.minVal,
                 onSet: true
-            }
+            },
+            this.saveState
         )
     }
     //кнопка инкремента
@@ -44,14 +66,18 @@ class Counter extends React.Component {
         let num = this.state.num
         num < this.state.maxVal && num++
         this.setState({
-            num: num
-        })
+                num: num
+            },
+            this.saveState
+        )
     }
     //сброс настроек
     resButton = () => {
         this.setState({
-            num: this.state.minVal
-        })
+                num: this.state.minVal
+            },
+            this.saveState
+        )
     }
 
 
@@ -103,7 +129,10 @@ class Counter extends React.Component {
                             <Button onClickFn={this.incButton}
                                     thisNum={this.state.num}
                                     title={'Inc'}
-                                    disabled={(this.state.onSet === false || this.state.num === Number(this.state.maxVal)) && 'disabled'}
+                                    disabled={
+                                        (this.state.onSet === false || this.state.num === Number(this.state.maxVal))
+                                        && 'disabled'
+                                    }
                             />
                             <Button onClickFn={this.resButton}
                                     thisNum={this.state.num}

@@ -16,6 +16,7 @@
   grid-auto-flow: column;
   display: inline-grid;
   grid-gap: 20%;
+  justify-items: center;
 }
 
 .setScreen {
