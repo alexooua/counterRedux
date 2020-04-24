@@ -1,11 +1,11 @@
 import React from 'react';
-import s from "./Counter.module.css"
+import s from "./CounterSecond.module.css"
 import Button from "./Button";
 import Num from "./Num";
 import Input from "./Input";
 
 
-class Counter extends React.Component {
+class CounterSecond extends React.Component {
     componentDidMount() {
         this.restoreState()
     }
@@ -14,17 +14,18 @@ class Counter extends React.Component {
         maxVal: 0,
         minVal: 0,
         num: null,
-        onSet: false
+        onSet: false,
+        onShow: false
     }
 
     //сохраняем в базу в браузере
     saveState = () => {
-        localStorage.setItem('Counter-state', JSON.stringify(this.state))
+        localStorage.setItem('Counter-state-two', JSON.stringify(this.state))
     }
     //востановлениве стейта
     restoreState = () => {
         let state = this.state
-        let stateAsString = localStorage.getItem("Counter-state")
+        let stateAsString = localStorage.getItem("Counter-state-two")
         if (stateAsString) {
             state = JSON.parse(stateAsString)
         }
@@ -56,7 +57,8 @@ class Counter extends React.Component {
         this.setState(
             {
                 num: this.state.minVal,
-                onSet: true
+                onSet: true,
+                onShow: false
             },
             this.saveState
         )
@@ -79,7 +81,15 @@ class Counter extends React.Component {
             this.saveState
         )
     }
+    //переключатель
+    onShow = () => {
+        this.setState({
+                onShow: true
+            },
+            this.saveState
+        )
 
+    }
 
     render = () => {
         let forMax = (Number(this.state.maxVal) < 0 || Number(this.state.maxVal) <= Number(this.state.minVal))
@@ -90,7 +100,7 @@ class Counter extends React.Component {
                 <div><h3>Counter</h3></div>
                 <div className={s.row}>
                     {/*Max Min input*/}
-                    <div className={s.block}>
+                    {this.state.onShow&&<div className={s.block}>
                         <Input
                             err={forMax && s.red}
                             setVal={this.setMaxVal}
@@ -113,15 +123,15 @@ class Counter extends React.Component {
                             />
                         </div>
 
-                    </div>
+                    </div>}
 
-                    <div className={s.block}>
+                    {!this.state.onShow&&<div className={s.block}>
                         {/*Span*/}
                         <Num nameNum={this.state.num}
                              maxVal={this.state.maxVal}
                              minVal={this.state.minVal}
                              onSet={this.state.onSet}
-                             vals={forMax||forMin}
+                             vals={forMax || forMin}
                         />
 
                         {/*2 button*/}
@@ -130,7 +140,7 @@ class Counter extends React.Component {
                                     thisNum={this.state.num}
                                     title={'Inc'}
                                     disabled={
-                                        (this.state.onSet === false || this.state.num === Number(this.state.maxVal))
+                                        this.state.onSet === false || this.state.num === Number(this.state.maxVal)
                                         && 'disabled'
                                     }
                             />
@@ -139,8 +149,11 @@ class Counter extends React.Component {
                                     title={'Res'}
                                     disabled={(this.state.onSet === false) && 'disabled'}
                             />
+                            <Button onClickFn={this.onShow}
+                                    title={'Set'}
+                            />
                         </div>
-                    </div>
+                    </div>}
                 </div>
             </div>
         );
@@ -148,4 +161,4 @@ class Counter extends React.Component {
 }
 
 
-export default Counter;
+export default CounterSecond;
