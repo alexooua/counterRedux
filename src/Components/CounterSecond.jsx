@@ -65,8 +65,9 @@ class CounterSecond extends React.Component {
     }
     //кнопка инкремента
     incButton = () => {
+
         let num = this.state.num
-        num < this.state.maxVal && num++
+        num < Number(this.state.maxVal) && num++
         this.setState({
                 num: num
             },
@@ -97,10 +98,10 @@ class CounterSecond extends React.Component {
 
         return (
             <div className={s.task}>
-                <div><h3>Counter</h3></div>
+                <div><h3>Counter (Second variant)</h3></div>
                 <div className={s.row}>
                     {/*Max Min input*/}
-                    {this.state.onShow&&<div className={s.block}>
+                    {this.state.onShow && <div className={s.block}>
                         <Input
                             err={forMax && s.red}
                             setVal={this.setMaxVal}

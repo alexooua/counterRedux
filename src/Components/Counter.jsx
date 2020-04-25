@@ -64,7 +64,7 @@ class Counter extends React.Component {
     //кнопка инкремента
     incButton = () => {
         let num = this.state.num
-        num < this.state.maxVal && num++
+        num < Number(this.state.maxVal) && num++
         this.setState({
                 num: num
             },
