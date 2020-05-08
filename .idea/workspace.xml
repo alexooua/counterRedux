@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="534a45f6-eddc-4ea5-a40b-542f0352d330" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/counter.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Counter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Counter.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,25 +62,59 @@
       <option name="presentableId" value="Default" />
       <updated>1588950644472</updated>
       <workItem from="1588950645790" duration="129000" />
-      <workItem from="1588950787709" duration="684000" />
+      <workItem from="1588950787709" duration="999000" />
     </task>
+    <task id="LOCAL-00001" summary="installRedux">
+      <created>1588951516686</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588951516686</updated>
+    </task>
+    <task id="LOCAL-00002" summary="installRedux">
+      <created>1588951530180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588951530180</updated>
+    </task>
+    <task id="LOCAL-00003" summary="installRedux">
+      <created>1588951692925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588951692925</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="installRedux" />
+    <option name="LAST_COMMIT_MESSAGE" value="installRedux" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="222" y="0" width="914" height="744" key="CommitChangelistDialog2" timestamp="1588951692858">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="222" y="0" width="914" height="744" key="CommitChangelistDialog2/0.0.1366.744@0.0.1366.744" timestamp="1588951692858" />
     <state x="466" y="131" width="426" height="484" key="FileChooserDialogImpl" timestamp="1588951422642">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="466" y="131" width="426" height="484" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1588951422642" />
-    <state x="446" y="255" key="Github.ShareDialog" timestamp="1588951132355">
+    <state x="446" y="255" key="Github.ShareDialog" timestamp="1588951624934">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="446" y="255" key="Github.ShareDialog/0.0.1366.744@0.0.1366.744" timestamp="1588951132355" />
+    <state x="446" y="255" key="Github.ShareDialog/0.0.1366.744@0.0.1366.744" timestamp="1588951624934" />
     <state x="172" y="8" key="SettingsEditor" timestamp="1588951082601">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="172" y="8" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1588951082601" />
+    <state x="278" y="109" width="802" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588951707071">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="278" y="109" width="802" height="528" key="Vcs.Push.Dialog.v2/0.0.1366.744@0.0.1366.744" timestamp="1588951707071" />
   </component>
 </project>

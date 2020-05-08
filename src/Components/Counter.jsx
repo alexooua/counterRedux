@@ -10,12 +10,7 @@ class Counter extends React.Component {
         this.restoreState()
     }
 
-    state = {
-        maxVal: 0,
-        minVal: 0,
-        num: null,
-        onSet: false
-    }
+
 
     //сохраняем в базу в браузере
     saveState = () => {
